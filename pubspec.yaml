@@ -1,0 +1,113 @@
+name: my_pdv
+description: T2Ti ERP - Pegasus PDV
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# version:A.B.C+X --> A.B.C represents the versionName such as 1.0.0 - X (the number after the +) represents the versionCode such as 1, 2, 3, etc.
+version: 1.0.9+9
+
+environment:
+  sdk: ">=2.18.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  provider: any
+  intl: any
+  font_awesome_flutter: any
+  backdrop: any
+  http: any
+  #flutter_masked_text: any
+  extended_masked_text: any
+  cpf_cnpj_validator: any
+  flutter_html: ^3.0.0-beta.2
+  bottomreveal: any
+  flutter_barcode_scanner: any
+  flutter_bootstrap: any
+  #flutter_sparkline: any
+  printing: ^5.9.1
+  drift: ^2.16.0
+  sqlite3_flutter_libs: ^0.5.7
+  path_provider: ^2.0.11
+  path: any
+  awesome_dialog: any
+  image_picker: any
+  catcher: any
+  sentry_flutter: ^7.18.0
+  desktop_window: any
+  url_launcher: any
+  email_validator: any
+  flutter_dotenv: any
+  encrypt: any
+  bottom_navy_bar: any
+  flutter_spinbox: any
+  ini: any
+  custom_radio_grouped_button: any
+  csv: any
+  file_picker: any
+  crypto: any
+  share_plus: any
+  sparkline: any
+  platform_device_id_v3: any
+  xml: any
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+dependency_overrides:
+  catcher:
+    git:
+      url: https://github.com/jhomlala/catcher.git
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  drift_dev: ^2.16.0
+  build_runner: any
+  msix: any
+  flutter_launcher_icons: any
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^3.0.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/launcher_icon.png"  
+  
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+     - assets/images/
+     - assets/fonts/
+     - assets/text/
+     - .env
+
+msix_config:
+  display_name: T2Ti Pegasus PDV
+  publisher_display_name: T2Ti.COM
+  identity_name: T2Ti.COM.T2TiPegasusPDV
+  msix_version: 1.0.10.0
+  publisher: CN=0A6E4754-6ACC-44ED-81F6-94B57BF2E8BC
+  logo_path: C:\T2Ti ERP\ERP 3.0 Programas e Fontes\Flutter\my_pdv\assets\images\logo_my_pdv.png
+  capabilities: internetClient,systemManagement,pointOfService,bluetooth
+  store: true     
